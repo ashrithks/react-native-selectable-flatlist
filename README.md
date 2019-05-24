@@ -6,6 +6,10 @@
 
 `$ npm install react-native-selectable-flatlist --save`
 
+## DEMO
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/19853363/58318866-460b7300-7e36-11e9-852a-1ae3400a637a.gif" height="600" title="demo">
+</p>
 
 ## Usage
 ```javascript
