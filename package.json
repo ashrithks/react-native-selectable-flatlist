@@ -1,0 +1,26 @@
+{
+  "name": "react-native-selectable-flatlist",
+  "version": "1.0.0",
+  "description": "Single/Multi Select Flatlist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrithks/rn-test-id.git"
+  },
+  "keywords": [
+    "react-native",
+    "selectable",
+    "FLatlist"
+  ],
+  "author": "Ashrith K S",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "*",
+    "lodash": "*",
+    "react-native-vector-icons": "*",
+    "prop-types": "*"
+  }
+}
