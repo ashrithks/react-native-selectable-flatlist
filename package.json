@@ -1,6 +1,6 @@
 {
   "name": "react-native-selectable-flatlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Single/Multi Select Flatlist",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashrithks/rn-test-id.git"
+    "url": "git+https://github.com/ashrithks/react-native-selectable-flatlist.git"
   },
   "keywords": [
     "react-native",
     "selectable",
-    "FLatlist"
+    "Flatlist",
+    "select",
+    "multi-select"
   ],
   "author": "Ashrith K S",
   "license": "MIT",

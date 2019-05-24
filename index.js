@@ -26,9 +26,9 @@ class SelectableFlatlist extends Component {
     renderUncheck: PropTypes.node,
     uncheckColor: PropTypes.string,
     uncheckIcon: PropTypes.node,
-    initialSelectedIndex: PropTypes.array,
-    itemsSelected: PropTypes.func,
-    multiSelect: PropTypes.bool
+    initialSelectedIndex: PropTypes.array.isRequired,
+    itemsSelected: PropTypes.func.isRequired,
+    multiSelect: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
