@@ -16,16 +16,16 @@ class SelectableFlatlist extends Component {
     ...ViewPropTypes,
     data: PropTypes.array.isRequired,
     state: PropTypes.oneOf([STATE.DEFAULT, STATE.EDIT]).isRequired,
-    cellItemComponent: PropTypes.node.isRequired,
+    cellItemComponent: PropTypes.any,
     touchStyles: PropTypes.any,
-    renderCheck: PropTypes.node,
+    renderCheck: PropTypes.any,
     checkUncheckContainerStyle: PropTypes.any,
     checkColor: PropTypes.string,
     checkUncheckSize: PropTypes.number,
     checkIcon: PropTypes.any,
-    renderUncheck: PropTypes.node,
+    renderUncheck: PropTypes.any,
     uncheckColor: PropTypes.string,
-    uncheckIcon: PropTypes.node,
+    uncheckIcon: PropTypes.any,
     initialSelectedIndex: PropTypes.array.isRequired,
     itemsSelected: PropTypes.func.isRequired,
     multiSelect: PropTypes.bool.isRequired
@@ -160,7 +160,7 @@ class SelectableFlatlist extends Component {
     const { state, cellItemComponent, touchStyles } = this.props;
     if (state === STATE.DEFAULT) {
       return (
-        cellItemComponent(item, ...this.props)
+        cellItemComponent(item, { ...this.props })
       );
     }
     return (
@@ -177,7 +177,7 @@ class SelectableFlatlist extends Component {
             this.renderUncheck()
         }
         {
-          cellItemComponent(item, ...this.props)
+          cellItemComponent(item, { ...this.props })
         }
       </TouchableWrapper>
     );

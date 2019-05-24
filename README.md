@@ -10,7 +10,7 @@
 ## Usage
 ```javascript
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,StyleSheet } from 'react-native';
 import SelectableFlatlist, { STATE } from 'react-native-selectable-flatlist';
 
 class Example extends Component {
@@ -19,26 +19,43 @@ class Example extends Component {
     console.log(selectedItem);
   }
 
-  rowItem = (item) => {
-    return(
-      <View style={{ flex:1, padding: 20 }}>
+  rowItem = (item) => (
+    <View
+      style={{
+        flex: 1,
+        borderBottomWidth: 0.5,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        paddingVertical: 20,
+        borderBottomColor: '##dfdfdf'
+      }}
+    >
       <Text>{item.test}</Text>
-      </View>
-    )
-  }
+    </View>
+  )
+
 render(){
   return(
-    <SelectableFlatlist
-     data={[{test:'test1'},{test:'test2'},{test:'test3'}]}
-     state={STATE.EDIT}
-     multiSelect={false}
-     itemsSelected={(selectedItem) => { this.itemsSelected(selectedItem); }}
-     initialSelectedIndex={[0]}
-     cellItemComponent={(item,otherProps) => { this.rowItem(item); }}
-    />
+    <View style={styles.container}>
+        <SelectableFlatlist
+          data={[{ test: 'test1' }, { test: 'test2' }, { test: 'test3' }]}
+          state={STATE.EDIT}
+          multiSelect={false}
+          itemsSelected={(selectedItem) => { this.itemsSelected(selectedItem); }}
+          initialSelectedIndex={[0]}
+          cellItemComponent={(item, otherProps) => this.rowItem(item)}
+        />
+    </View>
   )
 }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 40
+  }
+});
 
 export default Example;
 ```
