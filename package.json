@@ -1,6 +1,6 @@
 {
   "name": "react-native-selectable-flatlist",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Single/Multi Select Flatlist",
   "main": "index.js",
   "scripts": {
